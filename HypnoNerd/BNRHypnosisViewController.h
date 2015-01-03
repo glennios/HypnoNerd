@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface BNRHypnosisViewController : NSObject
+@interface BNRHypnosisViewController : UIViewController
 
 @end
