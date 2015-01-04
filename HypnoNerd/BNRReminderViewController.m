@@ -25,6 +25,18 @@
 }
 
 - (IBAction)addReminder:(id)sender {
-    NSLog(@"Setting a reminder for %@", self.datePicker.date);
+    UILocalNotification *note = [[UILocalNotification alloc] init];
+    
+    note.fireDate  = self.datePicker.date;
+    note.alertBody = @"Hypnotize me!";
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:note];
+    
+    
+    NSLog(@"Setting a reminder for %@", note.fireDate);
+}
+
+- (void)viewDidLoad {
+    NSLog(@"loaded BNRReminderViewController");
 }
 @end

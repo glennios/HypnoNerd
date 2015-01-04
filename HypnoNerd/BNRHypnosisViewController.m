@@ -28,4 +28,8 @@
     BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] init];
     self.view = backgroundView;
 }
+
+- (void)viewDidLoad {
+    NSLog(@"loaded BNRHypnosisViewController");
+}
 @end
