@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BNRHypnosisViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,17 @@
 
 @implementation AppDelegate
 
-
+// Override point for customization after application launch
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /* Setup Window */
+    //  - make root view HypnosisViewController the root controller of the window
+    //  - set the background color of the window to white
+    self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[BNRHypnosisViewController alloc] init];
+    self.window.backgroundColor    = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
