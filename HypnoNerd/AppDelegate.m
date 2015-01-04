@@ -21,7 +21,7 @@
     /* Setup Window */
     //  - add two view controllers to tab bar
     BNRHypnosisViewController *hypnosVC = [[BNRHypnosisViewController alloc] init];
-    BNRReminderViewController *remindVC = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:[NSBundle mainBundle]];
+    BNRReminderViewController *remindVC = [[BNRReminderViewController alloc] init];
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     tabBar.viewControllers = @[hypnosVC, remindVC];
 
