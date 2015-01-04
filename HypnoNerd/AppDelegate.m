@@ -19,11 +19,17 @@
 // Override point for customization after application launch
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /* Setup Window */
-    //  - make ReminderViewController the root controller of the window
+    //  - add two view controllers to tab bar
+    BNRHypnosisViewController *hypnosVC = [[BNRHypnosisViewController alloc] init];
+    BNRReminderViewController *remindVC = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:[NSBundle mainBundle]];
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[hypnosVC, remindVC];
+
+    //  - make tabBar the root controller of the window
     //  - set the background color of the window to white
     self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:[NSBundle mainBundle]];
     self.window.backgroundColor    = [UIColor whiteColor];
+    self.window.rootViewController = tabBar;
     
     [self.window makeKeyAndVisible];
 
