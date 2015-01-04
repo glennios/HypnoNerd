@@ -18,7 +18,7 @@
 // Override point for customization after application launch
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /* Setup Window */
-    //  - make root view HypnosisViewController the root controller of the window
+    //  - make HypnosisViewController the root controller of the window
     //  - set the background color of the window to white
     self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[BNRHypnosisViewController alloc] init];
