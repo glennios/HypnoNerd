@@ -7,7 +7,15 @@
 //
 
 #import "BNRHypnosisViewController.h"
+#import "BNRHypnosisView.h"
 
 @implementation BNRHypnosisViewController
 
+// - when a view controller is created (this class here), its self.view is nil, which causes loadView to be called.
+// - init hypnosisView
+// - set hypnosisView as the view of this controller
+- (void)loadView {
+    BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] init];
+    self.view = backgroundView;
+}
 @end
