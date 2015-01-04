@@ -32,8 +32,13 @@
     
     [[UIApplication sharedApplication] scheduleLocalNotification:note];
     
-    
     NSLog(@"Setting a reminder for %@", note.fireDate);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
 }
 
 - (void)viewDidLoad {
