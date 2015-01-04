@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRReminderViewController">
             <connections>
+                <outlet property="datePicker" destination="XkX-bM-eyJ" id="cVW-tW-X9g"/>
                 <outlet property="view" destination="n6k-I3-CYw" id="IKO-BL-t0Y"/>
             </connections>
         </placeholder>
@@ -37,6 +38,9 @@
                     <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                         <rect key="frame" x="56" y="265" width="181" height="99"/>
                     </variation>
+                    <connections>
+                        <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="K1S-cl-N9d"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
